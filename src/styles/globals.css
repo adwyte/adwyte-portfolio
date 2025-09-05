@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #00E7FF;
+  --shadow-glow: 0 0 24px rgba(0, 231, 255, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0b0f16;
+  color: white;
+}
+
+/* glass cards */
+.card {
+  border-radius: 0.75rem;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  background: rgba(15, 21, 34, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+/* subtle underline links */
+a:not(.btn) {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+  text-underline-offset: 4px;
+}
+a:not(.btn):hover {
+  text-decoration-color: var(--color-accent);
+}
